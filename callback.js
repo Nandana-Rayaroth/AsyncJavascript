@@ -118,12 +118,38 @@
 //     console.log("Result :", result)
 // })
 
-setTimeout(() => {
-    console.log("1")
-    setTimeout(() => {
-        console.log("2")
-        setTimeout(() => {
-            console.log("3")
-        }, 500)
-    }, 500)
-}, 500)
+// setTimeout(() => {
+//     console.log("1")
+//     setTimeout(() => {
+//         console.log("2")
+//         setTimeout(() => {
+//             console.log("3")
+//         }, 500)
+//     }, 500)
+// }, 500)
+
+// for(var i = 1; i <= 3; i++){
+//     setTimeout(function(){
+//         console.log(i)
+//     }, 1000)
+// }
+
+// for(var i = 1; i <= 3; i++){
+//     console.log(i)
+// }
+
+// for (var i = 1; i <= 3; i++) {
+//   setTimeout(function () {
+//     console.log(i);
+//   }, 1000);
+// }
+
+function multipleByTwo(number, callback){
+    callback(number * 2)
+}
+
+multipleByTwo(5, function(result) {
+    multipleByTwo(result, function(result2){
+        console.log(result2)
+    })
+})
