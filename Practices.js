@@ -333,25 +333,25 @@
 // await MonitorLongRunningTasks(tasks, 1000, onSlowTask)
 
 // 3. Write a function TimeoutWrapper(fn, ms) that wraps any async function fn and rejects if it takes longer than ms.
-async function TimeoutWrapper(fn, ms){
-  let startTime = Date.now()
-  let result = await fn()
-  let endTime = Date.now()
-  let elapsedTime = endTime - startTime
-  if(elapsedTime > elapsedTime){
-    return new Promise((resolve, reject) => {
-      reject("It take more time")
-    })
-  }
-}
+// async function TimeoutWrapper(fn, ms){
+//   let startTime = Date.now()
+//   let result = await fn()
+//   let endTime = Date.now()
+//   let elapsedTime = endTime - startTime
+//   if(elapsedTime > elapsedTime){
+//     return new Promise((resolve, reject) => {
+//       reject("It take more time")
+//     })
+//   }
+// }
 
-let task = function(){
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Resolved Promise")
-    }, 2000)
-  })
-} 
+// let task = function(){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Resolved Promise")
+//     }, 2000)
+//   })
+// } 
 
-let responsce = await TimeoutWrapper(task, 1000)
-console.log(responsce)
+// let responsce = await TimeoutWrapper(task, 1000)
+// console.log(responsce)
