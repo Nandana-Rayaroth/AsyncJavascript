@@ -144,12 +144,13 @@
 //   }, 1000);
 // }
 
-function multipleByTwo(number, callback){
-    callback(number * 2)
-}
+// function multipleByTwo(number, callback){
+//     callback(number * 2)
+// }
 
 multipleByTwo(5, function(result) {
     multipleByTwo(result, function(result2){
         console.log(result2)
     })
 })
+
